@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
     //called a number of times per second
     void FixedUpdate()
     {
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Main_Menu"))
+        {
+            return;
+        }
         //movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }

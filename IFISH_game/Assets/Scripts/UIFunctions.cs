@@ -8,7 +8,7 @@ public class UIFunctions : MonoBehaviour
  
     public void startGame()
     {
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Additive);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("SampleScene") );
         SceneManager.UnloadSceneAsync("Main_Menu");
         Debug.Log("Game Started!");
     }
