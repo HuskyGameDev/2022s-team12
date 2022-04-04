@@ -22,6 +22,7 @@ public class UIFunctions : MonoBehaviour
     public void returnToMenu()
     {
         SceneManager.LoadScene("Main_Menu", LoadSceneMode.Additive);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main_Menu"));
         SceneManager.UnloadSceneAsync("SampleScene");
         Debug.Log("Sent to main menu!");
     }

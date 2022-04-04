@@ -27,7 +27,8 @@ public class PlayerMovement : MonoBehaviour
     //called a number of times per second
     void FixedUpdate()
     {
-        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Main_Menu"))
+        
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main_Menu"))
         {
             return;
         }
