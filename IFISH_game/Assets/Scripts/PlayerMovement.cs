@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
+    void Start()
+    {
+        gameObject.tag = "Player";
+    }
+
     // Update is called once per frame
     void Update()
     {
