@@ -51,3 +51,6 @@ TagManager:
   - name: ObjectsBelow
     uniqueID: 3270527747
     locked: 0
+  - name: Minigame
+    uniqueID: 2292284343
+    locked: 0
