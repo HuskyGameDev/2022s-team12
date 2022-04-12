@@ -133,8 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 33296873}
   - component: {fileID: 33296872}
+  - component: {fileID: 33296874}
   m_Layer: 0
-  m_Name: TreeEvergreen (3)
+  m_Name: RightTreesBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,6 +206,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &33296874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33296871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f728785a0f0e1884ab2e6416eb64df03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 33296873}
+  player: {fileID: 1728331354}
+  objR: {fileID: 33296872}
+  offset: 0
 --- !u!1 &141342327
 GameObject:
   m_ObjectHideFlags: 0
@@ -7673,8 +7690,9 @@ GameObject:
   m_Component:
   - component: {fileID: 423438121}
   - component: {fileID: 423438120}
+  - component: {fileID: 423438122}
   m_Layer: 0
-  m_Name: TreeEvergreen (4)
+  m_Name: BotTrees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7745,6 +7763,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &423438122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423438119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f728785a0f0e1884ab2e6416eb64df03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 423438121}
+  player: {fileID: 1728331354}
+  objR: {fileID: 423438120}
+  offset: 1
 --- !u!1 &484027121
 GameObject:
   m_ObjectHideFlags: 0
@@ -8568,8 +8602,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1427358123}
   - component: {fileID: 1427358122}
+  - component: {fileID: 1427358124}
   m_Layer: 0
-  m_Name: TreeEvergreen (1)
+  m_Name: TopTrees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8634,12 +8669,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427358121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4735, y: 9.53, z: 0}
+  m_LocalPosition: {x: -4.51, y: 9.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1427358124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427358121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f728785a0f0e1884ab2e6416eb64df03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1427358123}
+  player: {fileID: 1728331354}
+  objR: {fileID: 1427358122}
+  offset: 0
 --- !u!1 &1591752549
 GameObject:
   m_ObjectHideFlags: 0
@@ -8899,8 +8950,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1676879812}
   - component: {fileID: 1676879811}
+  - component: {fileID: 1676879813}
   m_Layer: 0
-  m_Name: TreeEvergreen (2)
+  m_Name: RightTreesTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8965,12 +9017,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676879810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.42, y: 7.0409, z: 0}
+  m_LocalPosition: {x: 7.34, y: 7.0409, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1676879813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676879810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f728785a0f0e1884ab2e6416eb64df03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1676879812}
+  player: {fileID: 1728331354}
+  objR: {fileID: 1676879811}
+  offset: 0
 --- !u!1 &1728331352
 GameObject:
   m_ObjectHideFlags: 0
@@ -9052,7 +9120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728331352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2, y: -0.7, z: 0}
+  m_LocalPosition: {x: -2.3, y: 0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
