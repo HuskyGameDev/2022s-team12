@@ -38,10 +38,6 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         //movement
-        Vector2 temp = rb.position + movement * moveSpeed * Time.fixedDeltaTime;
-        if( (rb.position.x + temp.x < 15) && (rb.position.x + temp.x > -32.7) && (rb.position.y + temp.y < 16) && (rb.position.y + temp.y > -13.6) )
-        {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        }
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
