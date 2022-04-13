@@ -7,20 +7,29 @@ public class fishingGame : MonoBehaviour
     public RectTransform bar;
     float barMin;
     float barMax;
-    float barSpeed;
-    public Transform indicator;
-
+    float goalMin;
+    float goalMax;
+    public float barSpeed;
+    public RectTransform indicator;
+    public RectTransform goalBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        //get rectTransform
-        //bar = GetComponent<RectTransform>();
+        //define bar bounds and bar speed
         barMin = bar.rect.yMin;
         barMax = bar.rect.yMax;
-        //barSpeed = Random.Range(0.0f, 0.001f);
-        barSpeed = 0.001f;
+        barSpeed = barSpeed * Random.Range(0.0001f, 0.0005f);
+
+        //define indicator and goal position/size
         indicator.localPosition = new Vector3(0, 0, 0);
+        indicator.localScale = new Vector3(1, 0.03f, 0);
+        goalBar.localPosition = new Vector3(0, Random.Range(-0.5f, 0.5f), 0);
+        goalBar.localScale = new Vector3(1, 0.1f, 0);
+
+        //set up goal bounds
+        goalMax = getYmax(goalBar);
+        goalMin = getYmin(goalBar);
     }
 
     // Update is called once per frame
@@ -37,8 +46,33 @@ public class fishingGame : MonoBehaviour
         //updates bar position
         indicator.localPosition += Vector3.up * barSpeed;
 
-        if (Input.GetMouseButton(0)){
-            barSpeed = 0;
+        //check if space is pressed
+        if (Input.GetKeyDown("space")){
+            float indicatorY = indicator.localPosition.y;
+
+            if(indicatorY <= goalMax && indicatorY >= goalMin)
+            {
+                print("Fish caught");
+                print("goalMin: " + goalMin.ToString() + "goalMax: " + goalMax.ToString());
+                print("position of indicator: " + indicatorY.ToString());
+                barSpeed = 0;
+            }
+            else
+            {
+                print("Fish not caught try again");
+                print("goalMin: " + goalMin.ToString() + " goalMax: " + goalMax.ToString());
+                print("position of indicator: " + indicatorY.ToString());
+            }
         }
     }
+
+    float getYmax(RectTransform gameObject)
+    {
+         return gameObject.localPosition.y + gameObject.localScale.y;
+    }
+    float getYmin(RectTransform gameObject)
+    {
+        return gameObject.localPosition.y - gameObject.localScale.y;
+    }
+
 }
