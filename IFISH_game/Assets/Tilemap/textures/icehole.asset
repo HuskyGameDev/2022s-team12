@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: icehole
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 4c052b235648c184babaed79be0a1534, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab236d50dabc7a145bad96d7d2d4d526, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
