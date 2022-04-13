@@ -9735,12 +9735,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740519774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3370.8308}
-  m_LocalScale: {x: 0.7, y: 0.1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3333333, y: 0.040000003, z: 1}
   m_Children: []
-  m_Father: {fileID: 1977597975}
-  m_RootOrder: 1
+  m_Father: {fileID: 2051361632}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1740519776
 SpriteRenderer:
@@ -9918,7 +9918,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1981840149}
-  - {fileID: 1740519775}
   - {fileID: 2051361632}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -10015,6 +10014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2051361632}
   - component: {fileID: 2051361633}
+  - component: {fileID: 2051361634}
   m_Layer: 0
   m_Name: Bar
   m_TagString: Untagged
@@ -10022,8 +10022,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2051361632
-Transform:
+--- !u!224 &2051361632
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10032,10 +10032,16 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3370.8308}
   m_LocalScale: {x: 0.3, y: 2.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1740519775}
   m_Father: {fileID: 1977597975}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &2051361633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10087,6 +10093,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2051361634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051361631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf9f06d0fcbaba4989d5b0c2d9d0456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 2051361632}
+  indicator: {fileID: 1740519775}
 --- !u!1001 &4191892384302051032
 PrefabInstance:
   m_ObjectHideFlags: 0
