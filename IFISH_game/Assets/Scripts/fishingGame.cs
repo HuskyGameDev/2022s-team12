@@ -14,7 +14,7 @@ public class fishingGame : MonoBehaviour
     public RectTransform goalBar;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         //define bar bounds and bar speed
         barMin = bar.rect.yMin;
