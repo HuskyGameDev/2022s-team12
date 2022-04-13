@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class fishingGame : MonoBehaviour
 {
     public RectTransform bar;
+
     float barMin;
     float barMax;
     float goalMin;
@@ -75,6 +77,7 @@ public class fishingGame : MonoBehaviour
                 print("goalMin: " + goalMin.ToString() + " goalMax: " + goalMax.ToString());
                 print("position of indicator: " + indicatorY.ToString());
                 barSpeed = 0;
+                
             }
             else
             {
@@ -93,5 +96,4 @@ public class fishingGame : MonoBehaviour
     {
         return gameObject.localPosition.y - gameObject.localScale.y;
     }
-
 }

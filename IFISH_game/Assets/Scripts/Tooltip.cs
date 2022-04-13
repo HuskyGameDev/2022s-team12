@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Tooltip : MonoBehaviour
 {
     public GameObject box;
-    public Text textBox;
-    public string dialog;
     public bool playerInRange;
 
 
@@ -22,15 +20,11 @@ public class Tooltip : MonoBehaviour
     {
         if (playerInRange)
         {
-            if (box.activeInHierarchy)
-            {
-                box.SetActive(false);
-            }
-            else
-            {
-                box.SetActive(true);
-                textBox.text = dialog;
-            }
+            box.SetActive(true);
+        }
+        else
+        {
+            box.SetActive(false);
         }
     }
 
@@ -47,7 +41,6 @@ public class Tooltip : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            box.SetActive(false);
         }
     }
 }
