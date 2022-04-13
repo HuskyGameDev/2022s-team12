@@ -5,6 +5,7 @@ using UnityEngine;
 public class Minigame : MonoBehaviour
 {
     public GameObject castingBar;
+    bool playerInRange = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,22 +16,33 @@ public class Minigame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnTriggerEnter2D( Collider2D player )
-    {
-        if (player.CompareTag("Player"))
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange)
         {
-            castingBar.transform.localPosition = new Vector2(-1.5f, 0f);
-            castingBar.SetActive(true);
+            if (castingBar.activeInHierarchy)
+            {
+                castingBar.SetActive(false);
+            }
+            else
+            {
+                castingBar.transform.localPosition = new Vector3(-2f, 0f, 1f);
+                castingBar.SetActive(true);
+            }
         }
     }
 
-    void OnTriggerExit2D( Collider2D player )
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (player.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
             castingBar.SetActive(false);
         }
     }

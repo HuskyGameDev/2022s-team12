@@ -9042,7 +9042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box: {fileID: 848627946}
   textBox: {fileID: 906994112}
-  dialog: sample message
+  dialog: You can catch fishing by going to the pond and pressing 'E'
   playerInRange: 0
 --- !u!61 &1320245648
 BoxCollider2D:
@@ -9874,7 +9874,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2002682953
   m_SortingLayer: 4
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.8301887, g: 0.19188325, b: 0.19188325, a: 1}
   m_FlipX: 0
@@ -10076,13 +10076,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1977597975}
+  - component: {fileID: 1977597976}
   m_Layer: 0
   m_Name: CastingPowerBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1977597975
 Transform:
   m_ObjectHideFlags: 0
@@ -10091,14 +10092,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977597974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0681865, y: 0.23787719, z: -3370.8308}
-  m_LocalScale: {x: 2, y: 2, z: 3}
+  m_LocalPosition: {x: -3.0681946, y: 0.23788816, z: -3370.8308}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children:
   - {fileID: 1981840149}
   - {fileID: 2051361632}
   m_Father: {fileID: 1728331354}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1977597976
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977597974}
+  m_Enabled: 1
+  m_SortingLayerID: -2002682953
+  m_SortingLayer: 4
+  m_SortingOrder: 1
 --- !u!1 &1981840148
 GameObject:
   m_ObjectHideFlags: 0
@@ -10284,7 +10296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 2051361632}
-  barSpeed: 5
+  speedScale: 5
   indicator: {fileID: 1740519775}
   goalBar: {fileID: 1569470413}
 --- !u!1001 &4191892384302051032
