@@ -12871,6 +12871,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 2051361632}
+  frame: {fileID: 765568517}
+  img: {fileID: 283416585}
+  squid: {fileID: 21300000, guid: 5ad2fb42ac6447f4bb7a52ce5d0b9302, type: 3}
+  salmon: {fileID: 21300000, guid: 61f1e8eede0deb94eb143dd3d0ca2280, type: 3}
+  catfish: {fileID: 21300000, guid: 2adcfca53332bc14db2779789dc29d27, type: 3}
+  shield: {fileID: 21300000, guid: 24a0f60e4d50f4c418987f018fb4bde7, type: 3}
+  sword: {fileID: 21300000, guid: ee58c84299682b94f9e3dfa4ace230ec, type: 3}
   speedScale: 5
   indicator: {fileID: 1740519775}
   goalBar: {fileID: 1569470413}

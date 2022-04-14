@@ -6,6 +6,13 @@ using UnityEngine.UI;
 public class fishingGame : MonoBehaviour
 {
     public RectTransform bar;
+    public GameObject frame;
+    public Image img;
+    public Sprite squid;
+    public Sprite salmon;
+    public Sprite catfish;
+    public Sprite shield;
+    public Sprite sword;
 
     float barMin;
     float barMax;
@@ -51,6 +58,13 @@ public class fishingGame : MonoBehaviour
         //set up goal bounds
         goalMax = getYmax(goalBar);
         goalMin = getYmin(goalBar);
+
+        frame.SetActive(false);
+    }
+
+    void OnDisable()
+    {
+        frame.SetActive(false);
     }
 
     // Update is called once per frame
@@ -77,7 +91,8 @@ public class fishingGame : MonoBehaviour
                 print("goalMin: " + goalMin.ToString() + " goalMax: " + goalMax.ToString());
                 print("position of indicator: " + indicatorY.ToString());
                 barSpeed = 0;
-                
+                showFish();
+                frame.SetActive(true);
             }
             else
             {
@@ -95,5 +110,31 @@ public class fishingGame : MonoBehaviour
     float getYmin(RectTransform gameObject)
     {
         return gameObject.localPosition.y - gameObject.localScale.y;
+    }
+
+    void showFish()
+    {
+        int rarity = Random.Range(0, 100);
+
+        if( rarity > 85 )
+        {
+            img.sprite = catfish;
+        }
+        else if( rarity > 70 )
+        {
+            img.sprite = squid;
+        }
+        else if( rarity > 55 )
+        {
+            img.sprite = sword;
+        }
+        else if( rarity > 40 )
+        {
+            img.sprite = shield;
+        }
+        else
+        {
+            img.sprite = salmon;
+        }
     }
 }
