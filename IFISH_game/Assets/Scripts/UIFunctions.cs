@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIFunctions : MonoBehaviour
-{
- 
+{ 
     public void startGame()
     {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("SampleScene") );
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByPath("Assets/Scenes/SampleScene.unity") );
         SceneManager.UnloadSceneAsync("Main_Menu");
         Debug.Log("Game Started!");
     }
@@ -26,5 +26,4 @@ public class UIFunctions : MonoBehaviour
         SceneManager.UnloadSceneAsync("SampleScene");
         Debug.Log("Sent to main menu!");
     }
-
 }
